@@ -1,0 +1,9 @@
+Test-Command: browserslist
+Depends: @
+Features: test-name=binary-test
+Restrictions: allow-stderr
+
+Test-Command: node debian/tests/CVE-2021-23364.js
+Depends: @
+Features: test-name=CVE-2021-23364
+Restrictions: superficial, allow-stderr

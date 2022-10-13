@@ -1,0 +1,4 @@
+jest --ci -u \
+	--modulePathIgnorePatterns 'test/fixtures' '.pc/' \
+	--testPathIgnorePatterns test/update-db.test.js .pc/ \
+		test/shareable test/extends

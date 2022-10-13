@@ -1,0 +1,1 @@
+perl -pe 's/export const /exports./g; s/import \* as ([^ ]+) from \"(.+)\"/const $1 = require("$2")/' index.js >index.cjs

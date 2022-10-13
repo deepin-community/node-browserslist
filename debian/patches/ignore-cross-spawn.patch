@@ -1,0 +1,14 @@
+Description: replace cross-spawn by builtin child_process
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-12-08
+
+--- a/test/cli.test.ts
++++ b/test/cli.test.ts
+@@ -1,5 +1,5 @@
+ import { join } from 'path'
+-import spawn from 'cross-spawn'
++import { spawn } from 'child_process'
+ 
+ import browserslist from '../'
+ let pkg = require('../package.json')
