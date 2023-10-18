@@ -1,12 +1,6 @@
-node_modules/
-yarn-error.log
-yarn.lock
-
-.editorconfig
 test/
 coverage/
-.travis.yml
 
-.github/
 img/
 tsconfig.json
+grammar.w3c-ebnf

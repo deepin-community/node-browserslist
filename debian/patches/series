@@ -1,1 +1,3 @@
 ignore-cross-spawn.patch
+drop-oldDataWarning.patch
+disable-test-related-to-updates.patch

@@ -1,24 +1,25 @@
 version=4
 opts=\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-browserslist-$1.tar.gz/ \
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-browserslist-$1/ \
  https://github.com/ai/browserslist/tags .*/archive/.*/v?([\d\.]+).tar.gz group
 
 opts=\
 component=node-releases,\
 dversionmangle=auto,\
 ctype=nodejs,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-node-releases-$1.tar.gz/ \
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-node-releases-$1/ \
  https://github.com/chicoxyzzy/node-releases/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
-
-opts=\
-component=colorette,\
-dversionmangle=auto,\
-ctype=nodejs,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-colorette-$1.tar.gz/ \
- https://github.com/jorgebucaran/colorette/tags .*/archive/.*/v?([\d\.]+).tar.gz checksum
 
 # It is not recommended use npmregistry. Please investigate more.
 # Take a look at https://wiki.debian.org/debian/watch/
 opts="searchmode=plain,component=escalade,pgpmode=none" \
  https://registry.npmjs.org/escalade https://registry.npmjs.org/escalade/-/escalade-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+
+opts=\
+component=update-browserslist-db,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-update-db-$1/ \
+ https://github.com/browserslist/update-db/tags .*/archive.*/v?([\d\.]+).tar.gz checksum

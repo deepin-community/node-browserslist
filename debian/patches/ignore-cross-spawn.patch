@@ -1,14 +1,16 @@
 Description: replace cross-spawn by builtin child_process
-Author: Xavier Guimard <yadd@debian.org>
+Author: Yadd <yadd@debian.org>
 Forwarded: not-needed
-Last-Update: 2020-12-08
+Last-Update: 2021-12-24
 
---- a/test/cli.test.ts
-+++ b/test/cli.test.ts
-@@ -1,5 +1,5 @@
- import { join } from 'path'
--import spawn from 'cross-spawn'
-+import { spawn } from 'child_process'
+--- a/test/cli.test.js
++++ b/test/cli.test.js
+@@ -3,7 +3,7 @@
+ let { test } = require('uvu')
+ let { is, equal, match } = require('uvu/assert')
+ let { join } = require('path')
+-let spawn = require('cross-spawn')
++let { spawn } = require('child_process')
  
- import browserslist from '../'
+ let browserslist = require('..')
  let pkg = require('../package.json')

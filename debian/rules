@@ -9,8 +9,9 @@
 
 override_dh_auto_build:
 	dh_auto_build --buildsystem=nodejs
-	help2man --no-info ./cli.js >browserslist.1
+	help2man -N -n 'The config to share target browsers and Node.js versions' ./cli.js >browserslist.1
 
 override_dh_fixperms:
 	dh_fixperms
-	chmod +x debian/node-browserslist/usr/share/nodejs/browserslist/cli.js
+	chmod +x debian/node-browserslist/usr/share/nodejs/browserslist/cli.js \
+		debian/node-browserslist/usr/share/nodejs/update-browserslist-db/cli.js
