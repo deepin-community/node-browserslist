@@ -5,26 +5,23 @@ Source: https://github.com/ai/browserslist#readme
  https://github.com/chicoxyzzy/node-releases/tags
  https://github.com/jorgebucaran/colorette/tags
  https://registry.npmjs.org/escalade
+ https://github.com/browserslist/update-db/tags
 
 Files: *
-Copyright: 2014 Andrey Sitnik <andrey@sitnik.ru>
+Copyright: 2014-2022 Andrey Sitnik <andrey@sitnik.ru>
 License: Expat
 
 Files: debian/*
 Copyright: 2017 Pirate Praveen <praveen@debian.org>
- 2020 Yadd <yadd@debian.org>
+ 2020-2022 Yadd <yadd@debian.org>
 License: Expat
 
 Files: debian/tests/test_modules/*
 Copyright: Andrey Sitnik <andrey@sitnik.ru>
 License: Expat
 
-Files: debian/tests/test_modules/nanoid/*
-Copyright: 2017 Andrey Sitnik <andrey@sitnik.ru>
-License: Expat
-
-Files: debian/tests/test_modules/path-key/*
-Copyright: Sindre Sorhus <sindresorhus@gmail.com>
+Files: escalade/*
+Copyright: Luke Edwards <luke.edwards05@gmail.com>
 License: Expat
 
 Files: node-releases/*

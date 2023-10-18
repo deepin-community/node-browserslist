@@ -1,0 +1,4 @@
+mkdir -p node_modules/browserslist-config-test \
+	node_modules/@example.com \
+	node_modules/@scope
+NODE_ENV=test uvu test .test.js
